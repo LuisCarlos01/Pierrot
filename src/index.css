@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary-red: #8B0000;
+  --primary-yellow: #F0E68C;
+  --dark-gray: #2D2D2D;
+  --white: #FFFFFF;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply bg-red-800 hover:bg-red-900 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-yellow-200 hover:bg-yellow-300 text-red-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.section-padding {
+  @apply py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+.text-hero {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold;
+}
+
+.text-section-title {
+  @apply text-3xl sm:text-4xl font-bold;
+}
+
+.text-card-title {
+  @apply text-xl sm:text-2xl font-semibold;
+}

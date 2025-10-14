@@ -1,5 +1,5 @@
 
-# 🍽️ Buffet Pierrot — MVP do Site 
+# 🍽️ Buffet Pierroti Eventos — MVP do Site 
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Framework](https://img.shields.io/badge/framework-React%20%2B%20Vite-blue)
@@ -13,7 +13,7 @@
 
 ## 📘 Visão Geral
 
-O **Buffet Pierrot** é um site institucional desenvolvido como **MVP (Produto Mínimo Viável)**, com foco em **simplicidade, performance e experiência do usuário**.
+O **Buffet Pierroti Eventos** é um site desenvolvido como **MVP (Produto Mínimo Viável)**, com foco em **simplicidade, performance e experiência do usuário**.
 O objetivo é apresentar os serviços do buffet, permitir contato rápido via WhatsApp e criar base para evolução futura com painel administrativo e armazenamento de dados.
 
 ---
@@ -34,6 +34,20 @@ O projeto é **frontend-driven**, priorizando renderização no cliente e integr
 
 ---
 
+## 🎨 Identidade Visual
+
+**Logo:** Design circular elegante com "Pierroti" em fonte cursiva artística
+**Paleta de Cores:**
+- **Vermelho Bordô:** `#8B0000` (cor principal)
+- **Amarelo Creme:** `#F0E68C` (cor secundária)
+- **Cinza Escuro:** `#2D2D2D` (textos)
+- **Branco:** `#FFFFFF` (fundos)
+
+**Versões do Logo:**
+- Fundo branco (logo vermelho)
+- Fundo escuro (logo amarelo)
+- Fundo amarelo (logo vermelho)
+
 ## 🧩 Stack Técnica
 
 | Camada                   | Tecnologia                                                                                 | Descrição                                    |
@@ -53,12 +67,24 @@ O projeto é **frontend-driven**, priorizando renderização no cliente e integr
 src/
 ├── assets/
 │   └── images/
+│       ├── logo/
+│       │   ├── logo-principal.png
+│       │   ├── logo-amarelo.png
+│       │   └── favicon.ico
+│       ├── hero/
+│       │   └── buffet-principal.jpg
+│       ├── galeria/
+│       │   └── eventos/
+│       └── backgrounds/
 ├── components/
 │   ├── Header.jsx
 │   ├── Hero.jsx
 │   ├── About.jsx
 │   ├── Services.jsx
 │   ├── ContactForm.jsx
+│   ├── Testimonials.jsx
+│   ├── Gallery.jsx
+│   ├── FAQ.jsx
 │   └── Footer.jsx
 ├── pages/
 │   └── Home.jsx
@@ -89,6 +115,16 @@ src/
 3. Preenche o formulário de orçamento
 4. É redirecionado automaticamente para o **WhatsApp** do buffet com a mensagem formatada
 5. (Opcional) Dados podem ser enviados para uma API leve no futuro
+
+## 🎯 Seções Implementadas
+
+- **Hero:** Título impactante + CTA principal
+- **Como Funciona:** Processo do buffet em 3 etapas
+- **Diferenciais:** Pontos fortes do Buffet Pierroti
+- **Depoimentos:** Avaliações de clientes satisfeitos
+- **Galeria:** Fotos de eventos realizados
+- **FAQ:** Perguntas frequentes
+- **Contato:** Formulário com integração WhatsApp
 
 ---
 
