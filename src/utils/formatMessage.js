@@ -3,17 +3,17 @@ export const formatWhatsAppMessage = (formData) => {
   const { nome, telefone, email, evento, convidados, data, mensagem } = formData;
   
   const message = `
-🍽️ *SOLICITAÇÃO DE ORÇAMENTO - BUFFET PIERROTI EVENTOS*
+🍽️ *SOLICITAÇÃO DE ORÇAMENTO - BUFFET PIERROT EVENTOS*
 
 👤 *Cliente:* ${nome}
 📞 *Telefone:* ${telefone}
 ${email ? `📧 *E-mail:* ${email}` : ''}
 
-🎉 *Evento:* ${evento}
-👥 *Convidados:* ${convidados} pessoas
-📅 *Data:* ${data}
+🎉 *Evento:* ${evento || 'Não especificado'}
+👥 *Convidados:* ${convidados || 'Não especificado'} pessoas
+📅 *Data:* ${data || 'Não especificada'}
 
-💬 *Mensagem:* ${mensagem || 'Sem mensagem adicional'}
+💬 *Mensagem:* ${mensagem || 'Solicitação de orçamento via site'}
 
 _Enviado via site oficial_
   `.trim();
@@ -42,16 +42,8 @@ export const validateForm = (formData) => {
     errors.telefone = 'Telefone é obrigatório';
   }
   
-  if (!formData.evento?.trim()) {
-    errors.evento = 'Tipo de evento é obrigatório';
-  }
-  
-  if (!formData.convidados || formData.convidados < 1) {
-    errors.convidados = 'Número de convidados é obrigatório';
-  }
-  
-  if (!formData.data?.trim()) {
-    errors.data = 'Data do evento é obrigatória';
+  if (formData.email && !formData.email.includes('@')) {
+    errors.email = 'E-mail inválido';
   }
   
   return {
