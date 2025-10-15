@@ -1,8 +1,14 @@
 import React from 'react'
+import { smoothScrollToCustom } from '../utils/formatMessage'
 
 const About = () => {
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault()
+    smoothScrollToCustom(sectionId, 80, 1000)
+  }
+
   return (
-    <section style={{
+    <section id="sobre" style={{
       backgroundColor: '#f9fafb',
       padding: '4rem 0',
       margin: '0',
@@ -164,6 +170,7 @@ const About = () => {
         }}>
           <a 
             href="#contato" 
+            onClick={(e) => handleNavClick(e, 'contato')}
             style={{
               backgroundColor: '#8B0000',
               color: 'white',

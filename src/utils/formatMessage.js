@@ -36,6 +36,52 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
+// Função para scroll suave até uma seção
+export const smoothScrollTo = (elementId, offset = 80) => {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
+};
+
+// Função para scroll suave com animação customizada
+export const smoothScrollToCustom = (elementId, offset = 80, duration = 800) => {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  const startPosition = window.pageYOffset;
+  const elementPosition = element.getBoundingClientRect().top;
+  const targetPosition = elementPosition + startPosition - offset;
+  const distance = targetPosition - startPosition;
+  
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    
+    // Função de easing (easeInOutCubic)
+    const ease = progress < 0.5 
+      ? 4 * progress * progress * progress 
+      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+    
+    window.scrollTo(0, startPosition + distance * ease);
+    
+    if (progress < 1) {
+      requestAnimationFrame(animation);
+    }
+  };
+
+  requestAnimationFrame(animation);
+};
+
 // Função para formatar telefone brasileiro
 export const formatPhoneNumber = (value) => {
   // Remove tudo que não é dígito

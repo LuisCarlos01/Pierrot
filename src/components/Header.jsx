@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
+import { smoothScrollToCustom } from '../utils/formatMessage'
 
 const Header = () => {
   const [logoError, setLogoError] = useState(false)
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault()
+    smoothScrollToCustom(sectionId, 80, 1000)
+  }
   return (
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="container-max">
@@ -24,16 +30,32 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-red-800 transition-colors">
+            <a 
+              href="#inicio" 
+              onClick={(e) => handleNavClick(e, 'inicio')}
+              className="text-gray-700 hover:text-red-800 transition-colors duration-300 cursor-pointer"
+            >
               Início
             </a>
-            <a href="#sobre" className="text-gray-700 hover:text-red-800 transition-colors">
+            <a 
+              href="#sobre" 
+              onClick={(e) => handleNavClick(e, 'sobre')}
+              className="text-gray-700 hover:text-red-800 transition-colors duration-300 cursor-pointer"
+            >
               Sobre
             </a>
-            <a href="#servicos" className="text-gray-700 hover:text-red-800 transition-colors">
+            <a 
+              href="#servicos" 
+              onClick={(e) => handleNavClick(e, 'servicos')}
+              className="text-gray-700 hover:text-red-800 transition-colors duration-300 cursor-pointer"
+            >
               Serviços
             </a>
-            <a href="#contato" className="text-gray-700 hover:text-red-800 transition-colors">
+            <a 
+              href="#contato" 
+              onClick={(e) => handleNavClick(e, 'contato')}
+              className="text-gray-700 hover:text-red-800 transition-colors duration-300 cursor-pointer"
+            >
               Contato
             </a>
           </nav>
@@ -42,6 +64,7 @@ const Header = () => {
           <div className="hidden md:block">
             <a 
               href="#contato" 
+              onClick={(e) => handleNavClick(e, 'contato')}
               className="btn-primary"
             >
               Solicitar Orçamento
