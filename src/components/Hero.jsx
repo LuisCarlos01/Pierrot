@@ -224,7 +224,7 @@ const Hero = () => {
                     name="telefone"
                     value={formData.telefone}
                     onChange={handleInputChange}
-                    placeholder="(11) 99999-9999"
+                    placeholder="(35) 99140-4039"
                     maxLength="15"
                     style={{
                       width: '100%',

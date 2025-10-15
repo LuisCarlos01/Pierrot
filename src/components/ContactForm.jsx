@@ -116,7 +116,7 @@ const ContactForm = () => {
                 color: '#4b5563',
                 margin: '0'
               }}>
-                (11) 99999-9999
+                (35) 99140-4039
               </p>
             </div>
             
@@ -271,7 +271,7 @@ const ContactForm = () => {
                   name="telefone"
                   value={formData.telefone}
                   onChange={handleInputChange}
-                  placeholder="(11) 99999-9999"
+                  placeholder="(35) 99140-4039"
                   style={{
                     width: '100%',
                     padding: '0.75rem',
