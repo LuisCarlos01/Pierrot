@@ -23,7 +23,7 @@ _Enviado via site oficial_
 
 // Função para gerar link do WhatsApp
 export const generateWhatsAppLink = (formData) => {
-  const phoneNumber = "5535991404039"; // Número do Buffet Pierroti Eventos
+  const phoneNumber = "5535991404039"; // Número oficial: (35) 99140-4039 - Atualizado em 2025
   const message = formatWhatsAppMessage(formData);
   const encodedMessage = encodeURIComponent(message);
   
