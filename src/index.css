@@ -416,7 +416,12 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: carouselFade 8s infinite;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
 }
 
 .carousel-image:nth-child(1) {

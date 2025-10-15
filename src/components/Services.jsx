@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { smoothScrollToCustom } from '../utils/formatMessage'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [cardAnimations, setCardAnimations] = useState([false, false, false, false])
+  const [activeImages, setActiveImages] = useState([0, 0, 0, 0]) // Estado para controlar imagem ativa de cada card
+  const intervalRefs = useRef([])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,11 +23,38 @@ const Services = () => {
       }, 200 + (index * 150))
     )
 
+    // Iniciar carrosséis
+    startCarousels()
+
     return () => {
       clearTimeout(timer)
       cardTimers.forEach(clearTimeout)
+      stopCarousels()
     }
   }, [])
+
+  const startCarousels = () => {
+    // Limpar intervalos existentes
+    stopCarousels()
+    
+    // Iniciar carrossel para cada card
+    for (let cardIndex = 0; cardIndex < 4; cardIndex++) {
+      const interval = setInterval(() => {
+        setActiveImages(prev => {
+          const newState = [...prev]
+          newState[cardIndex] = (newState[cardIndex] + 1) % 3
+          return newState
+        })
+      }, 3000) // Troca a cada 3 segundos
+      
+      intervalRefs.current.push(interval)
+    }
+  }
+
+  const stopCarousels = () => {
+    intervalRefs.current.forEach(interval => clearInterval(interval))
+    intervalRefs.current = []
+  }
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault()
@@ -106,7 +135,7 @@ const Services = () => {
             >
               {/* Imagem 1 - Cozinha Profissional */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[0] === 0 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -114,7 +143,7 @@ const Services = () => {
               
               {/* Imagem 2 - Pratos Elegantes */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[0] === 1 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -122,7 +151,7 @@ const Services = () => {
               
               {/* Imagem 3 - Buffet Gourmet */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[0] === 2 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -130,9 +159,9 @@ const Services = () => {
               
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
-                <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
+                <div className={`carousel-indicator ${activeImages[0] === 0 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[0] === 1 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[0] === 2 ? 'active' : ''}`} />
               </div>
             </div>
             
@@ -196,7 +225,7 @@ const Services = () => {
             >
               {/* Imagem 1 - Equipe Trabalhando */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[1] === 0 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -204,7 +233,7 @@ const Services = () => {
               
               {/* Imagem 2 - Garçons Elegantes */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[1] === 1 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -212,7 +241,7 @@ const Services = () => {
               
               {/* Imagem 3 - Atendimento Premium */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[1] === 2 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -220,9 +249,9 @@ const Services = () => {
               
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
-                <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
+                <div className={`carousel-indicator ${activeImages[1] === 0 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[1] === 1 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[1] === 2 ? 'active' : ''}`} />
               </div>
             </div>
             
@@ -286,7 +315,7 @@ const Services = () => {
             >
               {/* Imagem 1 - Evento Corporativo */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[2] === 0 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -294,7 +323,7 @@ const Services = () => {
               
               {/* Imagem 2 - Festa Privada */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[2] === 1 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -302,7 +331,7 @@ const Services = () => {
               
               {/* Imagem 3 - Casamento */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[2] === 2 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -310,9 +339,9 @@ const Services = () => {
               
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
-                <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
+                <div className={`carousel-indicator ${activeImages[2] === 0 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[2] === 1 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[2] === 2 ? 'active' : ''}`} />
               </div>
             </div>
             
@@ -376,7 +405,7 @@ const Services = () => {
             >
               {/* Imagem 1 - Ingredientes Frescos */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[3] === 0 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -384,7 +413,7 @@ const Services = () => {
               
               {/* Imagem 2 - Temperos Especiais */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[3] === 1 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -392,7 +421,7 @@ const Services = () => {
               
               {/* Imagem 3 - Carnes Premium */}
               <div 
-                className="carousel-image"
+                className={`carousel-image ${activeImages[3] === 2 ? 'active' : ''}`}
                 style={{
                   backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
@@ -400,9 +429,9 @@ const Services = () => {
               
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
-                <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
+                <div className={`carousel-indicator ${activeImages[3] === 0 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[3] === 1 ? 'active' : ''}`} />
+                <div className={`carousel-indicator ${activeImages[3] === 2 ? 'active' : ''}`} />
               </div>
             </div>
             
