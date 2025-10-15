@@ -23,7 +23,7 @@ _Enviado via site oficial_
 
 // Função para gerar link do WhatsApp
 export const generateWhatsAppLink = (formData) => {
-  const phoneNumber = "5511999999999"; // Substituir pelo número real
+  const phoneNumber = "5535991404039"; // Número do Buffet Pierroti Eventos
   const message = formatWhatsAppMessage(formData);
   const encodedMessage = encodeURIComponent(message);
   
