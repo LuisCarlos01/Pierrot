@@ -167,14 +167,13 @@ const Services = () => {
             
             <div style={{ padding: '2rem' }}>
               <div 
-                className="animate-float"
                 style={{
-              backgroundColor: '#fef2f2',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              marginBottom: '1.5rem',
-              display: 'flex',
-              justifyContent: 'center'
+                  backgroundColor: '#fef2f2',
+                  padding: '1.5rem',
+                  borderRadius: '0.5rem',
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
               <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
@@ -257,14 +256,13 @@ const Services = () => {
             
             <div style={{ padding: '2rem' }}>
               <div 
-                className="animate-float"
                 style={{
-              backgroundColor: '#fef2f2',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              marginBottom: '1.5rem',
-              display: 'flex',
-              justifyContent: 'center'
+                  backgroundColor: '#fef2f2',
+                  padding: '1.5rem',
+                  borderRadius: '0.5rem',
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
               <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
@@ -347,14 +345,13 @@ const Services = () => {
             
             <div style={{ padding: '2rem' }}>
               <div 
-                className="animate-rotate-in"
                 style={{
-              backgroundColor: '#fef2f2',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              marginBottom: '1.5rem',
-              display: 'flex',
-              justifyContent: 'center'
+                  backgroundColor: '#fef2f2',
+                  padding: '1.5rem',
+                  borderRadius: '0.5rem',
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
               <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
@@ -437,14 +434,13 @@ const Services = () => {
             
             <div style={{ padding: '2rem' }}>
               <div 
-                className="animate-float"
                 style={{
-              backgroundColor: '#fef2f2',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              marginBottom: '1.5rem',
-              display: 'flex',
-              justifyContent: 'center'
+                  backgroundColor: '#fef2f2',
+                  padding: '1.5rem',
+                  borderRadius: '0.5rem',
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
               <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
