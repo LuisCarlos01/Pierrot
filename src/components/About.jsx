@@ -3,23 +3,28 @@ import { smoothScrollToCustom } from '../utils/formatMessage'
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [cardAnimations, setCardAnimations] = useState([false, false, false])
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100)
+
+    // Animar cards sequencialmente
+    const cardTimers = cardAnimations.map((_, index) => 
+      setTimeout(() => {
+        setCardAnimations(prev => {
+          const newState = [...prev]
+          newState[index] = true
+          return newState
+        })
+      }, 300 + (index * 200))
     )
 
-    const section = document.getElementById('sobre')
-    if (section) {
-      observer.observe(section)
+    return () => {
+      clearTimeout(timer)
+      cardTimers.forEach(clearTimeout)
     }
-
-    return () => observer.disconnect()
   }, [])
 
   const handleNavClick = (e, sectionId) => {
@@ -43,23 +48,28 @@ const About = () => {
           textAlign: 'center',
           marginBottom: '3rem'
         }}>
-          <h2 className={isVisible ? 'slide-in-up' : ''} style={{
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
-            color: '#1f2937',
-            marginBottom: '1rem',
-            opacity: isVisible ? 1 : 0
-          }}>
+          <h2 
+            className={`${isVisible ? 'animate-slide-up' : ''}`}
+            style={{
+              fontSize: '2.5rem',
+              fontWeight: 'bold',
+              color: '#1f2937',
+              marginBottom: '1rem',
+              opacity: isVisible ? 1 : 0
+            }}
+          >
             Como Funciona Nosso Buffet?
           </h2>
-          <p className={isVisible ? 'slide-in-up' : ''} style={{
-            fontSize: '1.25rem',
-            color: '#4b5563',
-            maxWidth: '600px',
-            margin: '0 auto',
-            opacity: isVisible ? 1 : 0,
-            animationDelay: '0.2s'
-          }}>
+          <p 
+            className={`${isVisible ? 'animate-slide-up delay-200' : ''}`}
+            style={{
+              fontSize: '1.25rem',
+              color: '#4b5563',
+              maxWidth: '600px',
+              margin: '0 auto',
+              opacity: isVisible ? 1 : 0
+            }}
+          >
             Levamos a experiência completa de um buffet até você! Seja em casa, no salão de festas, na empresa ou até em um sítio, nossa equipe cuida de tudo para que você aproveite sem preocupações.
           </p>
         </div>
@@ -70,28 +80,36 @@ const About = () => {
           gap: '2rem'
         }}>
           {/* Step 1 */}
-          <div className={`about-card ${isVisible ? 'slide-in-left' : ''}`} style={{
-            textAlign: 'center',
-            padding: '2rem',
-            backgroundColor: 'white',
-            borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-            opacity: isVisible ? 1 : 0,
-            animationDelay: '0.4s'
-          }}>
-            <div className="about-step-number" style={{
-              backgroundColor: '#8B0000',
-              color: 'white',
-              width: '4rem',
-              height: '4rem',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              margin: '0 auto 1.5rem'
-            }}>
+          <div 
+            className={`hover-lift ${cardAnimations[0] ? 'animate-scale-in' : ''}`}
+            style={{
+              textAlign: 'center',
+              padding: '2rem',
+              backgroundColor: 'white',
+              borderRadius: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              opacity: cardAnimations[0] ? 1 : 0,
+              transform: cardAnimations[0] ? 'scale(1)' : 'scale(0.8)',
+              transition: 'all 0.6s ease-out'
+            }}
+          >
+            <div 
+              className="hover-scale animate-pulse"
+              style={{
+                backgroundColor: '#8B0000',
+                color: 'white',
+                width: '4rem',
+                height: '4rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                margin: '0 auto 1.5rem',
+                cursor: 'pointer'
+              }}
+            >
               1
             </div>
             <h3 style={{
@@ -111,28 +129,36 @@ const About = () => {
           </div>
           
           {/* Step 2 */}
-          <div className={`about-card ${isVisible ? 'scale-in' : ''}`} style={{
-            textAlign: 'center',
-            padding: '2rem',
-            backgroundColor: 'white',
-            borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-            opacity: isVisible ? 1 : 0,
-            animationDelay: '0.6s'
-          }}>
-            <div className="about-step-number" style={{
-              backgroundColor: '#8B0000',
-              color: 'white',
-              width: '4rem',
-              height: '4rem',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              margin: '0 auto 1.5rem'
-            }}>
+          <div 
+            className={`hover-lift ${cardAnimations[1] ? 'animate-scale-in' : ''}`}
+            style={{
+              textAlign: 'center',
+              padding: '2rem',
+              backgroundColor: 'white',
+              borderRadius: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              opacity: cardAnimations[1] ? 1 : 0,
+              transform: cardAnimations[1] ? 'scale(1)' : 'scale(0.8)',
+              transition: 'all 0.6s ease-out'
+            }}
+          >
+            <div 
+              className="hover-scale animate-pulse"
+              style={{
+                backgroundColor: '#8B0000',
+                color: 'white',
+                width: '4rem',
+                height: '4rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                margin: '0 auto 1.5rem',
+                cursor: 'pointer'
+              }}
+            >
               2
             </div>
             <h3 style={{
@@ -152,28 +178,36 @@ const About = () => {
           </div>
           
           {/* Step 3 */}
-          <div className={`about-card ${isVisible ? 'slide-in-right' : ''}`} style={{
-            textAlign: 'center',
-            padding: '2rem',
-            backgroundColor: 'white',
-            borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-            opacity: isVisible ? 1 : 0,
-            animationDelay: '0.8s'
-          }}>
-            <div className="about-step-number" style={{
-              backgroundColor: '#8B0000',
-              color: 'white',
-              width: '4rem',
-              height: '4rem',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              margin: '0 auto 1.5rem'
-            }}>
+          <div 
+            className={`hover-lift ${cardAnimations[2] ? 'animate-scale-in' : ''}`}
+            style={{
+              textAlign: 'center',
+              padding: '2rem',
+              backgroundColor: 'white',
+              borderRadius: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              opacity: cardAnimations[2] ? 1 : 0,
+              transform: cardAnimations[2] ? 'scale(1)' : 'scale(0.8)',
+              transition: 'all 0.6s ease-out'
+            }}
+          >
+            <div 
+              className="hover-scale animate-pulse"
+              style={{
+                backgroundColor: '#8B0000',
+                color: 'white',
+                width: '4rem',
+                height: '4rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                margin: '0 auto 1.5rem',
+                cursor: 'pointer'
+              }}
+            >
               3
             </div>
             <h3 style={{
@@ -200,7 +234,7 @@ const About = () => {
           <a 
             href="#contato" 
             onClick={(e) => handleNavClick(e, 'contato')}
-            className={`about-cta-button ${isVisible ? 'slide-in-up' : ''}`}
+            className={`hover-scale animate-bounce ${isVisible ? 'animate-slide-up delay-500' : ''}`}
             style={{
               backgroundColor: '#8B0000',
               color: 'white',
@@ -210,8 +244,20 @@ const About = () => {
               textDecoration: 'none',
               display: 'inline-block',
               fontWeight: '600',
+              transition: 'all 0.3s ease',
               opacity: isVisible ? 1 : 0,
-              animationDelay: '1s'
+              transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3)'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = '#7f1d1d'
+              e.target.style.boxShadow = '0 6px 16px rgba(139, 0, 0, 0.4)'
+              e.target.style.transform = 'translateY(-2px)'
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = '#8B0000'
+              e.target.style.boxShadow = '0 4px 12px rgba(139, 0, 0, 0.3)'
+              e.target.style.transform = 'translateY(0)'
             }}
           >
             SOLICITAR ORÇAMENTO
