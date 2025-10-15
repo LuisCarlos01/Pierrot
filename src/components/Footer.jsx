@@ -9,7 +9,7 @@ const Footer = () => {
             {/* Logo and Description */}
             <div>
               <img 
-                src="/src/assets/images/PIERROTI_-Logos.jpg" 
+                src="/src/assets/images/logo-oficial.png" 
                 alt="Buffet Pierroti Eventos" 
                 className="h-16 w-auto mb-4"
               />

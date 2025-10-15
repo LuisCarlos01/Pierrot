@@ -88,7 +88,7 @@ const Hero = () => {
           <div style={{marginBottom: '4rem'}}>
             {!logoError ? (
               <img 
-                src="/src/assets/images/PIERROTI_-Logos.jpg" 
+                src="/src/assets/images/logo-oficial.png" 
                 alt="Buffet Pierroti Eventos" 
                 style={{height: '3.5rem', width: 'auto', margin: '0 auto'}}
                 onError={() => setLogoError(true)}
