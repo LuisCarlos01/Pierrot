@@ -128,36 +128,9 @@ const Services = () => {
                 }}
               />
               
-              {/* Imagem 4 - Chefs em Ação */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 5 - Cozinha Moderna */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 6 - Preparação Gourmet */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
                 <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
               </div>
@@ -237,31 +210,7 @@ const Services = () => {
                 }}
               />
               
-              {/* Imagem 3 - Supervisão */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 4 - Atendimento Premium */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 5 - Serviço de Mesa */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 6 - Equipe Unida */}
+              {/* Imagem 3 - Atendimento Premium */}
               <div 
                 className="carousel-image"
                 style={{
@@ -272,9 +221,6 @@ const Services = () => {
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
                 <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
               </div>
@@ -362,36 +308,9 @@ const Services = () => {
                 }}
               />
               
-              {/* Imagem 4 - Aniversário */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 5 - Confraternização */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 6 - Evento Social */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
                 <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
               </div>
@@ -459,7 +378,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -467,7 +386,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -475,40 +394,13 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 4 - Vegetais Orgânicos */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 5 - Frutos do Mar */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
-                }}
-              />
-              
-              {/* Imagem 6 - Ervas Aromáticas */}
-              <div 
-                className="carousel-image"
-                style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
               {/* Indicadores do Carrossel */}
               <div className="carousel-indicators">
                 <div className="carousel-indicator active" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
-                <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
                 <div className="carousel-indicator" />
               </div>
