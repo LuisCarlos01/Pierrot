@@ -16,7 +16,7 @@ const Header = () => {
           <div className="flex items-center">
             {!logoError ? (
               <img 
-                src="/src/assets/images/logo-oficial.png" 
+                src="/images/logo-oficial.png" 
                 alt="Buffet Pierroti Eventos" 
                 className="h-12 w-auto"
                 onError={() => setLogoError(true)}

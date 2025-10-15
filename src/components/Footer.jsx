@@ -9,7 +9,7 @@ const Footer = () => {
             {/* Logo and Description */}
             <div>
               <img 
-                src="/src/assets/images/logo-oficial.png" 
+                src="/images/logo-oficial.png" 
                 alt="Buffet Pierroti Eventos" 
                 className="h-16 w-auto mb-4"
               />
@@ -22,7 +22,7 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-semibold mb-4">Contato</h3>
               <div className="space-y-2 text-gray-300">
-                <p>📞 (35) 99999-9999</p>
+                <p>📞 (35) 99140-4039</p>
                 <p>📧 pierrotbuffet@gmail.com</p>
                 <p>📍 Varginha - MG</p>
               </div>
