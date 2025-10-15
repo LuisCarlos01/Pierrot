@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { smoothScrollToCustom } from '../utils/formatMessage'
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const section = document.getElementById('sobre')
+    if (section) {
+      observer.observe(section)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   const handleNavClick = (e, sectionId) => {
     e.preventDefault()
     smoothScrollToCustom(sectionId, 80, 1000)
@@ -23,19 +43,22 @@ const About = () => {
           textAlign: 'center',
           marginBottom: '3rem'
         }}>
-          <h2 style={{
+          <h2 className={isVisible ? 'slide-in-up' : ''} style={{
             fontSize: '2.5rem',
             fontWeight: 'bold',
             color: '#1f2937',
-            marginBottom: '1rem'
+            marginBottom: '1rem',
+            opacity: isVisible ? 1 : 0
           }}>
             Como Funciona Nosso Buffet?
           </h2>
-          <p style={{
+          <p className={isVisible ? 'slide-in-up' : ''} style={{
             fontSize: '1.25rem',
             color: '#4b5563',
             maxWidth: '600px',
-            margin: '0 auto'
+            margin: '0 auto',
+            opacity: isVisible ? 1 : 0,
+            animationDelay: '0.2s'
           }}>
             Levamos a experiência completa de um buffet até você! Seja em casa, no salão de festas, na empresa ou até em um sítio, nossa equipe cuida de tudo para que você aproveite sem preocupações.
           </p>
@@ -47,14 +70,16 @@ const About = () => {
           gap: '2rem'
         }}>
           {/* Step 1 */}
-          <div style={{
+          <div className={`about-card ${isVisible ? 'slide-in-left' : ''}`} style={{
             textAlign: 'center',
             padding: '2rem',
             backgroundColor: 'white',
             borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            opacity: isVisible ? 1 : 0,
+            animationDelay: '0.4s'
           }}>
-            <div style={{
+            <div className="about-step-number" style={{
               backgroundColor: '#8B0000',
               color: 'white',
               width: '4rem',
@@ -86,14 +111,16 @@ const About = () => {
           </div>
           
           {/* Step 2 */}
-          <div style={{
+          <div className={`about-card ${isVisible ? 'scale-in' : ''}`} style={{
             textAlign: 'center',
             padding: '2rem',
             backgroundColor: 'white',
             borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            opacity: isVisible ? 1 : 0,
+            animationDelay: '0.6s'
           }}>
-            <div style={{
+            <div className="about-step-number" style={{
               backgroundColor: '#8B0000',
               color: 'white',
               width: '4rem',
@@ -125,14 +152,16 @@ const About = () => {
           </div>
           
           {/* Step 3 */}
-          <div style={{
+          <div className={`about-card ${isVisible ? 'slide-in-right' : ''}`} style={{
             textAlign: 'center',
             padding: '2rem',
             backgroundColor: 'white',
             borderRadius: '0.5rem',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            opacity: isVisible ? 1 : 0,
+            animationDelay: '0.8s'
           }}>
-            <div style={{
+            <div className="about-step-number" style={{
               backgroundColor: '#8B0000',
               color: 'white',
               width: '4rem',
@@ -171,6 +200,7 @@ const About = () => {
           <a 
             href="#contato" 
             onClick={(e) => handleNavClick(e, 'contato')}
+            className={`about-cta-button ${isVisible ? 'slide-in-up' : ''}`}
             style={{
               backgroundColor: '#8B0000',
               color: 'white',
@@ -180,10 +210,9 @@ const About = () => {
               textDecoration: 'none',
               display: 'inline-block',
               fontWeight: '600',
-              transition: 'background-color 0.3s'
+              opacity: isVisible ? 1 : 0,
+              animationDelay: '1s'
             }}
-            onMouseOver={(e) => e.target.style.backgroundColor = '#7f1d1d'}
-            onMouseOut={(e) => e.target.style.backgroundColor = '#8B0000'}
           >
             SOLICITAR ORÇAMENTO
           </a>
