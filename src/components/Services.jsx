@@ -95,37 +95,71 @@ const Services = () => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
             }}
           >
-            {/* Imagem da Cozinha */}
+            {/* Carrossel de Imagens Gourmet */}
             <div 
-              className="video-overlay"
+              className="carousel-container gourmet-hover"
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 position: 'relative'
               }}
             >
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                backgroundColor: 'rgba(139, 0, 0, 0.8)',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}>
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                </svg>
-                🍳 Cozinha Premium
+              {/* Imagem 1 - Cozinha Profissional */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 2 - Pratos Elegantes */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 3 - Buffet Gourmet */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 4 - Chefs em Ação */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 5 - Cozinha Moderna */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 6 - Preparação Gourmet */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Indicadores do Carrossel */}
+              <div className="carousel-indicators">
+                <div className="carousel-indicator active" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
               </div>
             </div>
             
@@ -178,49 +212,77 @@ const Services = () => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
             }}
           >
-            {/* Vídeo da Equipe */}
+            {/* Carrossel de Equipe Profissional */}
             <div 
-              className="video-overlay"
+              className="carousel-container gourmet-hover"
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 position: 'relative'
               }}
             >
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                backgroundColor: 'rgba(139, 0, 0, 0.8)',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                cursor: 'pointer'
-              }}
-              onClick={() => {
-                // Simular abertura de vídeo
-                alert('🎬 Vídeo da equipe em ação será reproduzido aqui!')
-              }}
-              >
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                ▶️ Ver Equipe
+              {/* Imagem 1 - Equipe Trabalhando */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 2 - Garçons Elegantes */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 3 - Supervisão */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 4 - Atendimento Premium */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 5 - Serviço de Mesa */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 6 - Equipe Unida */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Indicadores do Carrossel */}
+              <div className="carousel-indicators">
+                <div className="carousel-indicator active" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
               </div>
             </div>
             
             <div style={{ padding: '2rem' }}>
               <div 
-                className="animate-glow"
+                className="animate-float"
                 style={{
                   backgroundColor: '#fef2f2',
                   padding: '1.5rem',
@@ -267,37 +329,71 @@ const Services = () => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
             }}
           >
-            {/* Imagem de Eventos */}
+            {/* Carrossel de Eventos */}
             <div 
-              className="video-overlay"
+              className="carousel-container gourmet-hover"
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 position: 'relative'
               }}
             >
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                backgroundColor: 'rgba(139, 0, 0, 0.8)',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}>
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                </svg>
-                🎉 Eventos Grandes
+              {/* Imagem 1 - Evento Corporativo */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 2 - Festa Privada */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 3 - Casamento */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 4 - Aniversário */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 5 - Confraternização */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 6 - Evento Social */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Indicadores do Carrossel */}
+              <div className="carousel-indicators">
+                <div className="carousel-indicator active" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
               </div>
             </div>
             
@@ -350,37 +446,71 @@ const Services = () => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
             }}
           >
-            {/* Imagem dos Ingredientes */}
+            {/* Carrossel de Ingredientes Premium */}
             <div 
-              className="video-overlay"
+              className="carousel-container gourmet-hover"
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 position: 'relative'
               }}
             >
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                backgroundColor: 'rgba(139, 0, 0, 0.8)',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}>
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                </svg>
-                ⭐ Premium Quality
+              {/* Imagem 1 - Ingredientes Frescos */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 2 - Temperos Especiais */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 3 - Carnes Premium */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 4 - Vegetais Orgânicos */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 5 - Frutos do Mar */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Imagem 6 - Ervas Aromáticas */}
+              <div 
+                className="carousel-image"
+                style={{
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                }}
+              />
+              
+              {/* Indicadores do Carrossel */}
+              <div className="carousel-indicators">
+                <div className="carousel-indicator active" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
+                <div className="carousel-indicator" />
               </div>
             </div>
             
