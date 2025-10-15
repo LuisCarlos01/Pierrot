@@ -211,14 +211,15 @@ const About = () => {
                 height: '200px',
                 borderRadius: '0.5rem',
                 marginBottom: '1.5rem',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"), url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 cursor: 'pointer',
                 transition: 'transform 0.3s ease',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                backgroundColor: '#f3f4f6'
               }}
               onMouseOver={(e) => {
                 e.target.style.transform = 'scale(1.05)'
