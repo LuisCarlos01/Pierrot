@@ -50,9 +50,9 @@ const Services = () => {
           <h2 
             className={`${isVisible ? 'animate-slide-bottom' : ''}`}
             style={{
-              fontSize: '2.5rem',
-              fontWeight: 'bold',
-              color: '#1f2937',
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            color: '#1f2937',
               marginBottom: '1rem',
               opacity: isVisible ? 1 : 0
             }}
@@ -62,9 +62,9 @@ const Services = () => {
           <p 
             className={`${isVisible ? 'animate-slide-bottom delay-200' : ''}`}
             style={{
-              fontSize: '1.25rem',
-              color: '#4b5563',
-              maxWidth: '600px',
+            fontSize: '1.25rem',
+            color: '#4b5563',
+            maxWidth: '600px',
               margin: '0 auto',
               opacity: isVisible ? 1 : 0
             }}
@@ -83,7 +83,7 @@ const Services = () => {
           <div 
             className={`premium-card ${cardAnimations[0] ? 'animate-slide-left' : ''}`}
             style={{
-              textAlign: 'center',
+            textAlign: 'center',
               padding: '0',
               backgroundColor: 'white',
               borderRadius: '1rem',
@@ -132,7 +132,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -167,32 +167,32 @@ const Services = () => {
               <div 
                 className="animate-float"
                 style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '1.5rem',
-                  borderRadius: '0.5rem',
-                  marginBottom: '1.5rem',
-                  display: 'flex',
-                  justifyContent: 'center'
+              backgroundColor: '#fef2f2',
+              padding: '1.5rem',
+              borderRadius: '0.5rem',
+              marginBottom: '1.5rem',
+              display: 'flex',
+              justifyContent: 'center'
                 }}
               >
-                <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1f2937',
-                marginBottom: '1rem'
-              }}>
-                Cozinha de Alta Performance
-              </h3>
-              <p style={{
-                color: '#4b5563',
-                lineHeight: '1.6'
-              }}>
-                Produzimos pratos frescos e saborosos, garantindo rapidez sem perder a qualidade.
-              </p>
+              <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: '600',
+              color: '#1f2937',
+              marginBottom: '1rem'
+            }}>
+              Cozinha de Alta Performance
+            </h3>
+            <p style={{
+              color: '#4b5563',
+              lineHeight: '1.6'
+            }}>
+              Produzimos pratos frescos e saborosos, garantindo rapidez sem perder a qualidade.
+            </p>
             </div>
           </div>
           
@@ -200,7 +200,7 @@ const Services = () => {
           <div 
             className={`premium-card ${cardAnimations[1] ? 'animate-slide-right' : ''}`}
             style={{
-              textAlign: 'center',
+            textAlign: 'center',
               padding: '0',
               backgroundColor: 'white',
               borderRadius: '1rem',
@@ -225,7 +225,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -284,32 +284,32 @@ const Services = () => {
               <div 
                 className="animate-float"
                 style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '1.5rem',
-                  borderRadius: '0.5rem',
-                  marginBottom: '1.5rem',
-                  display: 'flex',
-                  justifyContent: 'center'
+              backgroundColor: '#fef2f2',
+              padding: '1.5rem',
+              borderRadius: '0.5rem',
+              marginBottom: '1.5rem',
+              display: 'flex',
+              justifyContent: 'center'
                 }}
               >
-                <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1f2937',
-                marginBottom: '1rem'
-              }}>
-                Equipe Profissional
-              </h3>
-              <p style={{
-                color: '#4b5563',
-                lineHeight: '1.6'
-              }}>
-                Supervisão especializada, cozinheiros e garçons experientes para seu evento.
-              </p>
+              <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: '600',
+              color: '#1f2937',
+              marginBottom: '1rem'
+            }}>
+              Equipe Profissional
+            </h3>
+            <p style={{
+              color: '#4b5563',
+              lineHeight: '1.6'
+            }}>
+              Supervisão especializada, cozinheiros e garçons experientes para seu evento.
+            </p>
             </div>
           </div>
           
@@ -317,7 +317,7 @@ const Services = () => {
           <div 
             className={`premium-card ${cardAnimations[2] ? 'animate-zoom-in' : ''}`}
             style={{
-              textAlign: 'center',
+            textAlign: 'center',
               padding: '0',
               backgroundColor: 'white',
               borderRadius: '1rem',
@@ -401,32 +401,32 @@ const Services = () => {
               <div 
                 className="animate-rotate-in"
                 style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '1.5rem',
-                  borderRadius: '0.5rem',
-                  marginBottom: '1.5rem',
-                  display: 'flex',
-                  justifyContent: 'center'
+              backgroundColor: '#fef2f2',
+              padding: '1.5rem',
+              borderRadius: '0.5rem',
+              marginBottom: '1.5rem',
+              display: 'flex',
+              justifyContent: 'center'
                 }}
               >
-                <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1f2937',
-                marginBottom: '1rem'
-              }}>
-                Eventos de Todos os Portes
-              </h3>
-              <p style={{
-                color: '#4b5563',
-                lineHeight: '1.6'
-              }}>
-                De pequenas festas a confraternizações corporativas para grandes empresas.
-              </p>
+              <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: '600',
+              color: '#1f2937',
+              marginBottom: '1rem'
+            }}>
+              Eventos de Todos os Portes
+            </h3>
+            <p style={{
+              color: '#4b5563',
+              lineHeight: '1.6'
+            }}>
+              De pequenas festas a confraternizações corporativas para grandes empresas.
+            </p>
             </div>
           </div>
           
@@ -434,7 +434,7 @@ const Services = () => {
           <div 
             className={`premium-card ${cardAnimations[3] ? 'animate-slide-bottom' : ''}`}
             style={{
-              textAlign: 'center',
+            textAlign: 'center',
               padding: '0',
               backgroundColor: 'white',
               borderRadius: '1rem',
@@ -459,7 +459,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -467,7 +467,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -475,7 +475,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -483,7 +483,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -491,7 +491,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -499,7 +499,7 @@ const Services = () => {
               <div 
                 className="carousel-image"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")'
                 }}
               />
               
@@ -518,32 +518,32 @@ const Services = () => {
               <div 
                 className="animate-float"
                 style={{
-                  backgroundColor: '#fef2f2',
-                  padding: '1.5rem',
-                  borderRadius: '0.5rem',
-                  marginBottom: '1.5rem',
-                  display: 'flex',
-                  justifyContent: 'center'
+              backgroundColor: '#fef2f2',
+              padding: '1.5rem',
+              borderRadius: '0.5rem',
+              marginBottom: '1.5rem',
+              display: 'flex',
+              justifyContent: 'center'
                 }}
               >
-                <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1f2937',
-                marginBottom: '1rem'
-              }}>
-                Ingredientes Premium
-              </h3>
-              <p style={{
-                color: '#4b5563',
-                lineHeight: '1.6'
-              }}>
-                Receitas especiais e ingredientes de primeiríssima qualidade, preparados na hora.
-              </p>
+              <svg style={{width: '3rem', height: '3rem', color: '#8B0000'}} fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: '600',
+              color: '#1f2937',
+              marginBottom: '1rem'
+            }}>
+              Ingredientes Premium
+            </h3>
+            <p style={{
+              color: '#4b5563',
+              lineHeight: '1.6'
+            }}>
+              Receitas especiais e ingredientes de primeiríssima qualidade, preparados na hora.
+            </p>
             </div>
           </div>
         </div>
@@ -552,9 +552,9 @@ const Services = () => {
         <div 
           className={`premium-card animate-glow ${isVisible ? 'animate-slide-bottom delay-800' : ''}`}
           style={{
-            textAlign: 'center',
-            backgroundColor: '#fefce8',
-            padding: '2rem',
+          textAlign: 'center',
+          backgroundColor: '#fefce8',
+          padding: '2rem',
             borderRadius: '1rem',
             border: '2px solid #fde047',
             opacity: isVisible ? 1 : 0,
