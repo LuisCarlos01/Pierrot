@@ -119,28 +119,38 @@ const About = () => {
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundColor: '#f3f4f6',
                 borderRadius: '0.5rem',
                 marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 200\'%3E%3Cdefs%3E%3ClinearGradient id=\'grad1\' x1=\'0%25\' y1=\'0%25\' x2=\'100%25\' y2=\'100%25\'%3E%3Cstop offset=\'0%25\' style=\'stop-color:%23f59e0b;stop-opacity:1\' /%3E%3Cstop offset=\'100%25\' style=\'stop-color:%23d97706;stop-opacity:1\' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'200\' fill=\'url(%23grad1)\'/%3E%3Ctext x=\'200\' y=\'100\' font-family=\'Arial, sans-serif\' font-size=\'24\' fill=\'white\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E🥗 ENTRADAS%3C/text%3E%3C/svg%3E")',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 cursor: 'pointer',
-                transition: 'transform 0.3s ease'
+                transition: 'transform 0.3s ease',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'scale(1.05)'
+                e.target.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)'
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'scale(1)'
+                e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'
               }}
             >
               <div style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.25rem',
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.7))',
                 color: 'white',
+                padding: '1rem',
                 fontSize: '0.875rem',
                 fontWeight: '600'
               }}>
-                Pratos Frios & Aperitivos
+                🥗 Pratos Frios & Aperitivos
               </div>
             </div>
             <h3 style={{
@@ -199,28 +209,38 @@ const About = () => {
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundColor: '#f3f4f6',
                 borderRadius: '0.5rem',
                 marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 200\'%3E%3Cdefs%3E%3ClinearGradient id=\'grad2\' x1=\'0%25\' y1=\'0%25\' x2=\'100%25\' y2=\'100%25\'%3E%3Cstop offset=\'0%25\' style=\'stop-color:%23dc2626;stop-opacity:1\' /%3E%3Cstop offset=\'100%25\' style=\'stop-color:%23b91c1c;stop-opacity:1\' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'200\' fill=\'url(%23grad2)\'/%3E%3Ctext x=\'200\' y=\'100\' font-family=\'Arial, sans-serif\' font-size=\'24\' fill=\'white\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E🍽️ PRATOS PRINCIPAIS%3C/text%3E%3C/svg%3E")',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 cursor: 'pointer',
-                transition: 'transform 0.3s ease'
+                transition: 'transform 0.3s ease',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'scale(1.05)'
+                e.target.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)'
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'scale(1)'
+                e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'
               }}
             >
               <div style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.25rem',
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.7))',
                 color: 'white',
+                padding: '1rem',
                 fontSize: '0.875rem',
                 fontWeight: '600'
               }}>
-                Pratos Quentes & Frios
+                🍽️ Pratos Quentes & Variados
               </div>
             </div>
             <h3 style={{
@@ -279,28 +299,38 @@ const About = () => {
               style={{
                 width: '100%',
                 height: '200px',
-                backgroundColor: '#f3f4f6',
                 borderRadius: '0.5rem',
                 marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 200\'%3E%3Cdefs%3E%3ClinearGradient id=\'grad3\' x1=\'0%25\' y1=\'0%25\' x2=\'100%25\' y2=\'100%25\'%3E%3Cstop offset=\'0%25\' style=\'stop-color:%23ec4899;stop-opacity:1\' /%3E%3Cstop offset=\'100%25\' style=\'stop-color:%23db2777;stop-opacity:1\' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'200\' fill=\'url(%23grad3)\'/%3E%3Ctext x=\'200\' y=\'100\' font-family=\'Arial, sans-serif\' font-size=\'24\' fill=\'white\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E🍰 SOBREMESAS%3C/text%3E%3C/svg%3E")',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 cursor: 'pointer',
-                transition: 'transform 0.3s ease'
+                transition: 'transform 0.3s ease',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'scale(1.05)'
+                e.target.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)'
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'scale(1)'
+                e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'
               }}
             >
               <div style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.25rem',
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.7))',
                 color: 'white',
+                padding: '1rem',
                 fontSize: '0.875rem',
                 fontWeight: '600'
               }}>
-                Doces & Sobremesas
+                🍰 Doces & Sobremesas
               </div>
             </div>
             <h3 style={{
