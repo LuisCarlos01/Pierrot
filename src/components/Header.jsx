@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Header = () => {
+  const [logoError, setLogoError] = useState(false)
   return (
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="container-max">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/src/assets/images/logo/logo-principal.png" 
-              alt="Buffet Pierroti Eventos" 
-              className="h-12 w-auto"
-            />
+            {!logoError ? (
+              <img 
+                src="/src/assets/images/logo/logo-principal.png" 
+                alt="Buffet Pierroti Eventos" 
+                className="h-12 w-auto"
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div className="h-12 px-3 bg-red-800 text-white flex items-center justify-center rounded-lg font-bold text-sm">
+                PIERROTI EVENTOS
+              </div>
+            )}
           </div>
           
           {/* Navigation */}

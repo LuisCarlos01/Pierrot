@@ -8,6 +8,8 @@ const Hero = () => {
     telefone: ''
   })
   const [errors, setErrors] = useState({})
+  const [logoError, setLogoError] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -24,7 +26,7 @@ const Hero = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     
     // Validação básica
@@ -34,11 +36,22 @@ const Hero = () => {
       return
     }
 
-    // Gerar link do WhatsApp
-    const whatsappLink = generateWhatsAppLink(formData)
+    setIsSubmitting(true)
     
-    // Abrir WhatsApp
-    window.open(whatsappLink, '_blank')
+    try {
+      // Simular delay para melhor UX
+      await new Promise(resolve => setTimeout(resolve, 500))
+      
+      // Gerar link do WhatsApp
+      const whatsappLink = generateWhatsAppLink(formData)
+      
+      // Abrir WhatsApp
+      window.open(whatsappLink, '_blank')
+    } catch (error) {
+      console.error('Erro ao processar formulário:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -62,34 +75,56 @@ const Hero = () => {
         <div style={{maxWidth: '56rem', margin: '0 auto', textAlign: 'center'}}>
           {/* Logo */}
           <div style={{marginBottom: '4rem'}}>
-            <img 
-              src="/src/assets/images/logo/logo-principal.png" 
-              alt="Buffet Pierroti Eventos" 
-              style={{height: '3.5rem', width: 'auto', margin: '0 auto'}}
-            />
+            {!logoError ? (
+              <img 
+                src="/src/assets/images/logo/logo-principal.png" 
+                alt="Buffet Pierroti Eventos" 
+                style={{height: '3.5rem', width: 'auto', margin: '0 auto'}}
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div style={{
+                height: '3.5rem',
+                width: 'auto',
+                margin: '0 auto',
+                backgroundColor: '#8B0000',
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '0.5rem',
+                fontSize: '1.25rem',
+                fontWeight: 'bold',
+                padding: '0 1rem'
+              }}>
+                BUFFET PIERROTI EVENTOS
+              </div>
+            )}
           </div>
 
           {/* Main Heading */}
           <div style={{marginBottom: '4rem'}}>
             <h1 style={{
-              fontSize: '2.25rem',
+              fontSize: '2.5rem',
               fontWeight: 'bold',
               color: 'white',
               marginBottom: '1.5rem',
               lineHeight: '1.1',
               textAlign: 'center',
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'
             }}>
               LEVE O MELHOR BUFFET<br />
               PARA SUA FESTA
             </h1>
             <p style={{
-              fontSize: '1.125rem',
+              fontSize: '1.25rem',
               color: '#fecaca',
-              maxWidth: '38rem',
+              maxWidth: '42rem',
               margin: '0 auto',
               lineHeight: '1.4',
-              textAlign: 'center'
+              textAlign: 'center',
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)'
             }}>
               Qualidade, sabor e um atendimento impecável para transformar seu evento em uma experiência inesquecível!
             </p>
@@ -202,25 +237,41 @@ const Hero = () => {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   style={{
                     width: '100%',
-                    backgroundColor: '#8B0000',
+                    backgroundColor: isSubmitting ? '#6b7280' : '#8B0000',
                     color: 'white',
                     fontSize: '1rem',
                     fontWeight: 'bold',
                     padding: '1rem 1.5rem',
                     borderRadius: '0.5rem',
                     border: 'none',
-                    cursor: 'pointer',
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
                     transition: 'background-color 0.3s',
                     marginTop: '0.5rem',
                     height: '3.5rem',
-                    outline: 'none'
+                    outline: 'none',
+                    opacity: isSubmitting ? 0.7 : 1
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = '#7f1d1d'}
-                  onMouseOut={(e) => e.target.style.backgroundColor = '#8B0000'}
+                  onMouseOver={(e) => !isSubmitting && (e.target.style.backgroundColor = '#7f1d1d')}
+                  onMouseOut={(e) => !isSubmitting && (e.target.style.backgroundColor = '#8B0000')}
                 >
-                  SOLICITAR ORÇAMENTO
+                  {isSubmitting ? (
+                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem'}}>
+                      <div style={{
+                        width: '1rem',
+                        height: '1rem',
+                        border: '2px solid transparent',
+                        borderTop: '2px solid white',
+                        borderRadius: '50%',
+                        animation: 'spin 1s linear infinite'
+                      }}></div>
+                      PROCESSANDO...
+                    </div>
+                  ) : (
+                    'SOLICITAR ORÇAMENTO'
+                  )}
                 </button>
               </form>
             </div>
