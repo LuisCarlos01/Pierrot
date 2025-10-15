@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { generateWhatsAppLink, validateForm } from '../utils/formatMessage'
+import { generateWhatsAppLink, validateForm, formatPhoneNumber } from '../utils/formatMessage'
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -13,10 +13,21 @@ const Hero = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+    
+    // Formatação especial para telefone
+    if (name === 'telefone') {
+      const formattedValue = formatPhoneNumber(value)
+      setFormData(prev => ({
+        ...prev,
+        [name]: formattedValue
+      }))
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }))
+    }
+    
     // Limpar erro quando usuário começar a digitar
     if (errors[name]) {
       setErrors(prev => ({
@@ -213,7 +224,8 @@ const Hero = () => {
                     name="telefone"
                     value={formData.telefone}
                     onChange={handleInputChange}
-                    placeholder="(DDD) + WhatsApp"
+                    placeholder="(11) 99999-9999"
+                    maxLength="15"
                     style={{
                       width: '100%',
                       padding: '1rem',

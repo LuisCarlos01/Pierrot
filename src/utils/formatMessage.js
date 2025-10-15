@@ -36,12 +36,33 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
-// Função para validar telefone
+// Função para formatar telefone brasileiro
+export const formatPhoneNumber = (value) => {
+  // Remove tudo que não é dígito
+  const numbers = value.replace(/\D/g, '');
+  
+  // Aplica máscara baseada no tamanho
+  if (numbers.length <= 2) {
+    return numbers;
+  } else if (numbers.length <= 6) {
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+  } else if (numbers.length <= 10) {
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 6)}-${numbers.slice(6)}`;
+  } else {
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+  }
+};
+
+// Função para limpar número de telefone (apenas dígitos)
+export const cleanPhoneNumber = (phone) => {
+  return phone.replace(/\D/g, '');
+};
+
+// Função para validar telefone brasileiro
 const isValidPhone = (phone) => {
-  // Remove caracteres não numéricos
-  const cleanPhone = phone.replace(/\D/g, '');
-  // Verifica se tem pelo menos 10 dígitos (DDD + número)
-  return cleanPhone.length >= 10;
+  const cleanPhone = cleanPhoneNumber(phone);
+  // Telefone brasileiro: DDD (2 dígitos) + número (8 ou 9 dígitos)
+  return cleanPhone.length === 10 || cleanPhone.length === 11;
 };
 
 // Função para validar formulário
@@ -59,7 +80,14 @@ export const validateForm = (formData) => {
   if (!formData.telefone?.trim()) {
     errors.telefone = 'Telefone é obrigatório';
   } else if (!isValidPhone(formData.telefone)) {
-    errors.telefone = 'Telefone inválido (formato: (DDD) + número)';
+    const cleanPhone = cleanPhoneNumber(formData.telefone);
+    if (cleanPhone.length < 10) {
+      errors.telefone = 'Telefone deve ter pelo menos 10 dígitos';
+    } else if (cleanPhone.length > 11) {
+      errors.telefone = 'Telefone deve ter no máximo 11 dígitos';
+    } else {
+      errors.telefone = 'Telefone inválido (formato: (DDD) + número)';
+    }
   }
   
   // Validação do email (opcional mas se preenchido deve ser válido)
