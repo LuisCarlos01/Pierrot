@@ -50,33 +50,122 @@ const ContactForm = () => {
       backgroundColor: 'white',
       padding: '4rem 0',
       margin: '0',
-      minHeight: '600px'
+      minHeight: '600px',
+      position: 'relative'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
         padding: '0 1rem'
       }}>
+        {/* Header Premium */}
         <div style={{
           textAlign: 'center',
-          marginBottom: '3rem'
+          marginBottom: '4rem',
+          position: 'relative'
         }}>
           <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
+            fontSize: '3rem',
+            fontWeight: '800',
             color: '#1f2937',
-            marginBottom: '1rem'
+            marginBottom: '1rem',
+            position: 'relative',
+            display: 'inline-block'
           }}>
             Solicite Seu Orçamento
+            <span style={{
+              position: 'absolute',
+              left: '50%',
+              bottom: '-0.5rem',
+              transform: 'translateX(-50%)',
+              width: '80px',
+              height: '4px',
+              backgroundColor: '#8B0000',
+              borderRadius: '2px'
+            }}></span>
           </h2>
+          
           <p style={{
             fontSize: '1.25rem',
             color: '#4b5563',
-            maxWidth: '600px',
-            margin: '0 auto'
+            maxWidth: '700px',
+            margin: '0 auto 2rem auto',
+            lineHeight: '1.6'
           }}>
             Preencha o formulário abaixo e entraremos em contato para criar o evento perfeito para você!
           </p>
+
+          {/* Prova Social */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '3rem',
+            marginTop: '2rem',
+            flexWrap: 'wrap'
+          }}>
+            <div style={{
+              textAlign: 'center',
+              padding: '1rem'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                fontWeight: '800',
+                color: '#8B0000',
+                marginBottom: '0.25rem'
+              }}>
+                500+
+              </div>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#6b7280',
+                fontWeight: '600'
+              }}>
+                Eventos Realizados
+              </div>
+            </div>
+            
+            <div style={{
+              textAlign: 'center',
+              padding: '1rem'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                fontWeight: '800',
+                color: '#8B0000',
+                marginBottom: '0.25rem'
+              }}>
+                100%
+              </div>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#6b7280',
+                fontWeight: '600'
+              }}>
+                Clientes Satisfeitos
+              </div>
+            </div>
+            
+            <div style={{
+              textAlign: 'center',
+              padding: '1rem'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                fontWeight: '800',
+                color: '#8B0000',
+                marginBottom: '0.25rem'
+              }}>
+                5★
+              </div>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#6b7280',
+                fontWeight: '600'
+              }}>
+                Avaliação Média
+              </div>
+            </div>
+          </div>
         </div>
         
         <div style={{
@@ -85,104 +174,274 @@ const ContactForm = () => {
           gap: '3rem',
           alignItems: 'start'
         }}>
-          {/* Contact Info */}
+          {/* Contact Info Premium */}
           <div style={{
-            backgroundColor: '#f9fafb',
-            padding: '2rem',
-            borderRadius: '0.5rem',
-            border: '1px solid #e5e7eb'
+            backgroundColor: 'white',
+            padding: '2.5rem',
+            borderRadius: '1rem',
+            border: '1px solid #e5e7eb',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+            position: 'relative',
+            overflow: 'hidden'
           }}>
+            {/* Decorative Element */}
+            <div style={{
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              right: '0',
+              height: '4px',
+              background: 'linear-gradient(90deg, #8B0000, #fbbf24)'
+            }}></div>
             <h3 style={{
-              fontSize: '1.5rem',
-              fontWeight: '600',
+              fontSize: '1.75rem',
+              fontWeight: '700',
               color: '#1f2937',
-              marginBottom: '1.5rem'
+              marginBottom: '2rem',
+              marginTop: '1rem',
+              position: 'relative'
             }}>
+              <span style={{
+                color: '#8B0000',
+                marginRight: '0.5rem'
+              }}>📞</span>
               Informações de Contato
             </h3>
             
             <div style={{
-              marginBottom: '1.5rem'
+              marginBottom: '2rem',
+              padding: '1.5rem',
+              backgroundColor: '#fef2f2',
+              borderRadius: '0.75rem',
+              border: '1px solid #fecaca',
+              position: 'relative'
             }}>
-              <h4 style={{
-                fontSize: '1.125rem',
-                fontWeight: '600',
-                color: '#8B0000',
-                marginBottom: '0.5rem'
+              <div style={{
+                position: 'absolute',
+                top: '-8px',
+                left: '1.5rem',
+                backgroundColor: '#8B0000',
+                color: 'white',
+                padding: '0.25rem 0.75rem',
+                borderRadius: '0.375rem',
+                fontSize: '0.75rem',
+                fontWeight: '600'
               }}>
-                📞 Telefone/WhatsApp
+                CONTATO DIRETO
+              </div>
+              <h4 style={{
+                fontSize: '1.25rem',
+                fontWeight: '700',
+                color: '#8B0000',
+                marginBottom: '0.75rem',
+                marginTop: '0.5rem'
+              }}>
+                📱 WhatsApp
               </h4>
               <p style={{
-                color: '#4b5563',
-                margin: '0'
+                color: '#1f2937',
+                margin: '0',
+                fontSize: '1.125rem',
+                fontWeight: '600'
               }}>
                 (35) 99140-4039
               </p>
-            </div>
-            
-            <div style={{
-              marginBottom: '1.5rem'
-            }}>
-              <h4 style={{
-                fontSize: '1.125rem',
-                fontWeight: '600',
-                color: '#8B0000',
-                marginBottom: '0.5rem'
-              }}>
-                📧 E-mail
-              </h4>
               <p style={{
-                color: '#4b5563',
-                margin: '0'
-              }}>
-                contato@buffetpierroti.com.br
-              </p>
-            </div>
-            
-            <div style={{
-              marginBottom: '1.5rem'
-            }}>
-              <h4 style={{
-                fontSize: '1.125rem',
-                fontWeight: '600',
-                color: '#8B0000',
-                marginBottom: '0.5rem'
-              }}>
-                ⏰ Horário de Atendimento
-              </h4>
-              <p style={{
-                color: '#4b5563',
-                margin: '0'
-              }}>
-                Segunda a Sexta: 8h às 18h<br />
-                Sábado: 8h às 14h
-              </p>
-            </div>
-            
-            <div style={{
-              backgroundColor: '#fef2f2',
-              padding: '1rem',
-              borderRadius: '0.5rem',
-              borderLeft: '4px solid #8B0000'
-            }}>
-              <p style={{
-                color: '#8B0000',
-                fontWeight: '600',
-                margin: '0',
+                color: '#6b7280',
+                margin: '0.5rem 0 0 0',
                 fontSize: '0.875rem'
               }}>
-                💡 <strong>Dica:</strong> Quanto mais detalhes você fornecer sobre seu evento, mais preciso será nosso orçamento!
+                Resposta rápida em até 2 horas
               </p>
             </div>
+            
+            {/* Benefícios */}
+            <div style={{
+              marginBottom: '2rem'
+            }}>
+              <h4 style={{
+                fontSize: '1.25rem',
+                fontWeight: '700',
+                color: '#1f2937',
+                marginBottom: '1rem',
+                display: 'flex',
+                alignItems: 'center'
+              }}>
+                <span style={{
+                  color: '#fbbf24',
+                  marginRight: '0.5rem',
+                  fontSize: '1.5rem'
+                }}>✨</span>
+                Por que escolher o Buffet Pierrot?
+              </h4>
+              
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem'
+              }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem'
+                }}>
+                  <div style={{
+                    width: '24px',
+                    height: '24px',
+                    backgroundColor: '#8B0000',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold'
+                  }}>
+                    ✓
+                  </div>
+                  <span style={{
+                    color: '#374151',
+                    fontSize: '0.95rem',
+                    fontWeight: '500'
+                  }}>
+                    Orçamento gratuito e sem compromisso
+                  </span>
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem'
+                }}>
+                  <div style={{
+                    width: '24px',
+                    height: '24px',
+                    backgroundColor: '#8B0000',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold'
+                  }}>
+                    ✓
+                  </div>
+                  <span style={{
+                    color: '#374151',
+                    fontSize: '0.95rem',
+                    fontWeight: '500'
+                  }}>
+                    Garantia de satisfação 100%
+                  </span>
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem'
+                }}>
+                  <div style={{
+                    width: '24px',
+                    height: '24px',
+                    backgroundColor: '#8B0000',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold'
+                  }}>
+                    ✓
+                  </div>
+                  <span style={{
+                    color: '#374151',
+                    fontSize: '0.95rem',
+                    fontWeight: '500'
+                  }}>
+                    Equipe especializada e experiente
+                  </span>
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem'
+                }}>
+                  <div style={{
+                    width: '24px',
+                    height: '24px',
+                    backgroundColor: '#8B0000',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold'
+                  }}>
+                    ✓
+                  </div>
+                  <span style={{
+                    color: '#374151',
+                    fontSize: '0.95rem',
+                    fontWeight: '500'
+                  }}>
+                    Atendimento personalizado
+                  </span>
+                </div>
+              </div>
+            </div>
+            
           </div>
           
-          {/* Contact Form */}
+          {/* Contact Form Premium */}
           <div style={{
-            backgroundColor: '#f9fafb',
-            padding: '2rem',
-            borderRadius: '0.5rem',
-            border: '1px solid #e5e7eb'
+            backgroundColor: 'white',
+            padding: '2.5rem',
+            borderRadius: '1rem',
+            border: '1px solid #e5e7eb',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+            position: 'relative',
+            overflow: 'hidden'
           }}>
+            {/* Decorative Element */}
+            <div style={{
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              right: '0',
+              height: '4px',
+              background: 'linear-gradient(90deg, #8B0000, #fbbf24)'
+            }}></div>
+            
+            {/* Form Header */}
+            <div style={{
+              textAlign: 'center',
+              marginBottom: '2rem',
+              marginTop: '1rem'
+            }}>
+              <h3 style={{
+                fontSize: '1.75rem',
+                fontWeight: '700',
+                color: '#1f2937',
+                marginBottom: '0.5rem'
+              }}>
+                <span style={{
+                  color: '#8B0000',
+                  marginRight: '0.5rem'
+                }}>📝</span>
+                Formulário de Orçamento
+              </h3>
+              <p style={{
+                color: '#6b7280',
+                fontSize: '0.95rem',
+                margin: '0'
+              }}>
+                Preencha os dados abaixo para receber seu orçamento personalizado
+              </p>
+            </div>
             <form onSubmit={handleSubmit} style={{
               display: 'flex',
               flexDirection: 'column',
@@ -413,26 +672,45 @@ const ContactForm = () => {
                 />
               </div>
               
-              {/* Submit Button */}
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: '#8B0000',
-                  color: 'white',
-                  fontSize: '1.125rem',
-                  padding: '1rem 2rem',
-                  borderRadius: '0.5rem',
-                  border: 'none',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'background-color 0.3s',
-                  marginTop: '1rem'
-                }}
-                onMouseOver={(e) => e.target.style.backgroundColor = '#7f1d1d'}
-                onMouseOut={(e) => e.target.style.backgroundColor = '#8B0000'}
-              >
-                SOLICITAR ORÇAMENTO VIA WHATSAPP
-              </button>
+              {/* Submit Button Premium */}
+              <div style={{
+                marginTop: '2rem',
+                position: 'relative'
+              }}>
+                <button
+                  type="submit"
+                  style={{
+                    backgroundColor: '#8B0000',
+                    color: 'white',
+                    fontSize: '1.25rem',
+                    padding: '1.25rem 2rem',
+                    borderRadius: '0.75rem',
+                    border: 'none',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    width: '100%',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    boxShadow: '0 10px 15px -3px rgba(139, 0, 0, 0.3), 0 4px 6px -2px rgba(139, 0, 0, 0.1)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = '#7f1d1d'
+                    e.target.style.transform = 'translateY(-2px)'
+                    e.target.style.boxShadow = '0 20px 25px -5px rgba(139, 0, 0, 0.4), 0 10px 10px -5px rgba(139, 0, 0, 0.2)'
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = '#8B0000'
+                    e.target.style.transform = 'translateY(0)'
+                    e.target.style.boxShadow = '0 10px 15px -3px rgba(139, 0, 0, 0.3), 0 4px 6px -2px rgba(139, 0, 0, 0.1)'
+                  }}
+                >
+                  GARANTIR MEU ORÇAMENTO GRATUITO
+                </button>
+                
+              </div>
             </form>
           </div>
         </div>
