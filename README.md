@@ -65,17 +65,6 @@ O projeto é **frontend-driven**, priorizando renderização no cliente e integr
 
 ```
 src/
-├── assets/
-│   └── images/
-│       ├── logo/
-│       │   ├── logo-principal.png
-│       │   ├── logo-amarelo.png
-│       │   └── favicon.ico
-│       ├── hero/
-│       │   └── buffet-principal.jpg
-│       ├── galeria/
-│       │   └── eventos/
-│       └── backgrounds/
 ├── components/
 │   ├── Header.jsx
 │   ├── Hero.jsx
@@ -91,7 +80,10 @@ src/
 ├── utils/
 │   └── formatMessage.js
 ├── main.jsx
-└── index.html
+└── index.css
+public/
+└── images/
+    └── logo-oficial.png
 ```
 
 ---
